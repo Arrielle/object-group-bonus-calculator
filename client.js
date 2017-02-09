@@ -9,4 +9,70 @@ var employees = [ atticus, jem, boo, scout, robert, mayella ];
 
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
-console.log(employees);
+// console.log(employees);
+
+
+// Function results are the bonus based on rating
+function bonus (reviewRating){
+  if (reviewRating <= 2) {
+    var initialBonus = 0;
+  } else if (reviewRating == 3) {
+    var initialBonus = .04;
+  } else if (reviewRating == 4) {
+    var initialBonus = .06;
+  } else {
+    var initialBonus = .10;
+  }
+  return initialBonus;
+};
+// Calling function and storing in a varable
+
+// var employeeBonus = initialBonus + altBonus;
+//
+//bonus(4);
+// // Function determines how long employee has been there and gives an additional bonus based off that
+function altBonus (employeeNumber){
+  if (employeeNumber.length < 5) {
+    var timeBonus = .05;
+  } else {
+    var timeBonus = 0;
+  }
+  return timeBonus;
+};
+
+//altBonus();
+//var intialTimeBonus = timeBonus + intialTimeBonus;
+// //Function determines if they make over 65,000 and adjusts thier bonus based on that
+function bonusDown (annualSalary, intialTimeBonus){
+  if (annualSalary > 65000){
+    var richieRich = .01;
+  }
+  var semifinalBonus = intialTimeBonus - richieRich;
+  return semifinalBonus;
+};
+bonusDown();
+console.log(bonusDown(65555, .06));
+
+
+// // Function determines based on all of the above if they are above or below a predetermined ammount.  Adjusts accourdingly
+
+function noBonus(upDownBonus){
+  if (upDownBonus > .13){
+  var finalBonus = .13;
+} else if(upDownBonus < 0) {
+   finalBonus = 0;
+}
+  return finalBonus;
+};
+noBonus();
+console.log(noBonus());
+
+for (var i = 0; i < employees.length; i++) {
+ // Going through the employee array and finding that object at that index
+ //employee[i].employeeNumber
+ bonus(employees[i].employeeNumber);
+}
+
+// function bonus (name, employeeNumber, annualSalary, reviewRating ) {
+// var name = name;
+// var bonusPercentage = function() {
