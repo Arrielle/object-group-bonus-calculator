@@ -11,6 +11,24 @@ var employees = [ atticus, jem, boo, scout, robert, mayella ];
 
 // console.log(employees);
 
+for (var i = 0; i < employees.length; i++) {
+ // Going through the employee array and finding that object at that index
+ //employee[i].employeeNumber
+ var bonusA = bonus(employees[i].reviewRating);
+ var bonusB = altBonus(employees[i].employeeNumber);
+ var bonusAB = bonusA + bonusB;
+ var bonusC = bonusDown(employees[i].annualSalary, bonusAB,) 
+}
+
+function bonusDown (annualSalary, intialTimeBonus){
+  if (annualSalary > 65000){
+    var richieRich = .01;
+  }
+  var semifinalBonus = intialTimeBonus - richieRich;
+  return semifinalBonus;
+};
+bonusDown();
+console.log(bonusDown(65555, .06));
 
 // Function results are the bonus based on rating
 function bonus (reviewRating){
@@ -67,11 +85,7 @@ function noBonus(upDownBonus){
 noBonus();
 console.log(noBonus());
 
-for (var i = 0; i < employees.length; i++) {
- // Going through the employee array and finding that object at that index
- //employee[i].employeeNumber
- bonus(employees[i].employeeNumber);
-}
+
 
 // function bonus (name, employeeNumber, annualSalary, reviewRating ) {
 // var name = name;
